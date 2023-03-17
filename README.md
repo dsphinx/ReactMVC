@@ -351,6 +351,29 @@ $result = $user->getAll();
 var_dump($result);
 ```
 
+## Explanation of the `get` Method in Databases
+
+The `get` method in databases is a way to use the SELECT statement in SQL to retrieve specific data from a table. 
+
+In the provided PHP code, the [ReactMVC](https://github.com/ReactMVC/ReactMVC) framework is used. In this code, the `User` class is defined as a model for the `users` table. Then, by creating an instance of this class, we can use the `get` method to retrieve a specific value of the `name` field from the `users` table with the condition `id=5`.
+
+To use the `get` method, two parameters need to be passed as input. The first parameter is an array of fields that we want to retrieve, and the second parameter is an array of conditions that we want to retrieve these fields with.
+
+In the provided PHP code, the `name` field is placed in the array of fields, and the condition `id=5` is placed in the array of conditions. Then, using the `get` method, the return value is stored in the `$result` variable, and the result is printed in the output using the `var_dump` function.
+
+The provided PHP code in markdown looks like this:
+
+```php
+<?php 
+use ReactMVC\App\Models\User; 
+
+$user = new User();
+$result = $user->get(["name"], ["id" => 5]); 
+
+var_dump($result);
+?>
+```
+
 ## More DB Library Documentation
 
 To use the features of the Medoo library, which are also usable in the `MysqlBaseModel` class, you can refer to the documentation of this library.
