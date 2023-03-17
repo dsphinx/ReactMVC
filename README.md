@@ -402,7 +402,7 @@ The "delete" command is one of the SQL commands used to remove records or rows f
 
 For example, if you are working with the User model in the ReactMVC framework and want to delete a user with id = 2, you can use the following code:
 
-```
+```php
 <?php
 use ReactMVC\App\Models\User;
 
@@ -417,7 +417,7 @@ In this code, an instance of the User class is created using "new", and then the
 
 In another example, to delete all records whose ID is between 1 and 5, you can use the following code:
 
-```
+```php
 <?php
 use ReactMVC\App\Models\User;
 
