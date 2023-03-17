@@ -432,6 +432,24 @@ In this code, the operator "<>" (not equal) is used to specify that all records 
 
 Finally, it should be noted that using the delete command is a very sensitive operation, and before executing it, you should ensure the accuracy and correctness of the conditions and filters specified. Also, to prevent data loss, you should create a backup of the database before using the delete command.
 
+### Updating Data in a Database
+
+One of the important operations in a database is updating or modifying data using which we can review and update existing information stored in a table. The purpose of this operation is to modify or change the information that has been previously registered.
+
+In the following code, you have called the User class and created a new object. Then, by calling its get function with the given parameters, you receive the desired information from the table. However, this code does not automatically make any changes to the database.
+
+For example, suppose you want to change the name of the user with id 1 from Hossein to Ali. To do this, you can use the update function of the User class. For instance:
+
+```php
+<?php
+use ReactMVC\App\Models\User;
+
+$user = new User();
+$user->update(["name" => "Ali"], ["id" => 1]);
+```
+
+By using the update function, the name of the user with id 1 changes to "Ali". However, keep in mind that depending on the structure of the database used, the way to use the update function may differ.
+
 ## More DB Library Documentation
 
 To use the features of the Medoo library, which are also usable in the `MysqlBaseModel` class, you can refer to the documentation of this library.
