@@ -381,6 +381,7 @@ MysqlBaseModel is one of the classes used in the ReactMVC framework. Designed fo
 One of the methods defined in the MysqlBaseModel class is the find method, which has the following syntax:
 
 ```php
+<?php
 use ReactMVC\App\Models\User;
 
 $user = new User();
@@ -395,6 +396,41 @@ In this example, we create an instance of the User class and then use its find m
 To use the find method in the MysqlBaseModel class, you need to first create an instance of the class and then use the find method to retrieve the desired data from the database. By using this method and other methods available in the MysqlBaseModel class, you can easily extract the required data from your database.
 
 Overall, the MysqlBaseModel class is one of the best tools available for working with MySQL databases. If you are looking for a simple yet powerful class to interact with your MySQL database, MysqlBaseModel is an excellent choice.
+
+## Delete Records
+The "delete" command is one of the SQL commands used to remove records or rows from a database table. After execution, all records matching the conditions specified in the "where" clause will be deleted from the table.
+
+For example, if you are working with the User model in the ReactMVC framework and want to delete a user with id = 2, you can use the following code:
+
+```
+<?php
+use ReactMVC\App\Models\User;
+
+$user = new User();
+
+$result = $user->delete(["id" => 2]);
+
+var_dump($result);
+```
+
+In this code, an instance of the User class is created using "new", and then the delete function is called on the object to remove the record that contains the identifier 2.
+
+In another example, to delete all records whose ID is between 1 and 5, you can use the following code:
+
+```
+<?php
+use ReactMVC\App\Models\User;
+
+$user = new User();
+
+$result = $user->delete(["id<>" => [1,5]]);
+
+var_dump($result);
+```
+
+In this code, the operator "<>" (not equal) is used to specify that all records whose ID is not between 1 and 5 should be deleted. This filter is sent to the database as an array of values.
+
+Finally, it should be noted that using the delete command is a very sensitive operation, and before executing it, you should ensure the accuracy and correctness of the conditions and filters specified. Also, to prevent data loss, you should create a backup of the database before using the delete command.
 
 ## More DB Library Documentation
 
