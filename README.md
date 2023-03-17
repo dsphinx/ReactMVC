@@ -315,6 +315,7 @@ DB_NAME=ReactMVC
 DB_USER=root
 DB_PASS=
 ```
+Be sure to set the database collation to utf8mb4_general_ci
 
 ## Creating a New Record
 
