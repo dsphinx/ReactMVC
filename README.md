@@ -374,6 +374,27 @@ var_dump($result);
 ?>
 ```
 
+## MysqlBaseModel's find Method: Retrieving Data of a Specific Row by Its ID
+MysqlBaseModel is one of the classes used in the ReactMVC framework. Designed for working with MySQL databases, this class utilizes various methods to perform different operations on database tables.
+
+One of the methods defined in the MysqlBaseModel class is the find method, which has the following syntax:
+
+```php
+use ReactMVC\App\Models\User;
+
+$user = new User();
+
+$result = $user->find(1);
+
+var_dump($result);
+```
+
+In this example, we create an instance of the User class and then use its find method to retrieve data of the user with ID 1 from the corresponding table in the MySQL database. After executing the find method, we receive an array of user data with ID 1.
+
+To use the find method in the MysqlBaseModel class, you need to first create an instance of the class and then use the find method to retrieve the desired data from the database. By using this method and other methods available in the MysqlBaseModel class, you can easily extract the required data from your database.
+
+Overall, the MysqlBaseModel class is one of the best tools available for working with MySQL databases. If you are looking for a simple yet powerful class to interact with your MySQL database, MysqlBaseModel is an excellent choice.
+
 ## More DB Library Documentation
 
 To use the features of the Medoo library, which are also usable in the `MysqlBaseModel` class, you can refer to the documentation of this library.
