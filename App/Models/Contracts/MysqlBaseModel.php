@@ -98,4 +98,11 @@ class MysqlBaseModel extends BaseModel
         return $this->connection->count($this->table, $where);
     }
 
+    # Sum
+    public function sum(string $column, array $where = [])
+    {
+        return $this->connection->sum($this->table, $column, $where);
+    }
+
+
 }
