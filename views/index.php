@@ -1,7 +1,3 @@
-<?php
-use ReactMVC\App\Core\App;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +7,6 @@ use ReactMVC\App\Core\App;
     <title><?= $appName ?></title>
 </head>
 <body>
-    <h3><?= App::name() ?> run in <?= App::url() ?></h3>
+    <h3><?= $hello ?></h3>
 </body>
 </html>

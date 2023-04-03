@@ -32,7 +32,7 @@ class Router{
         foreach ($middleware as $middleware_class) {
             $middleware_obj = new $middleware_class;
             $middleware_obj->handle($middleware);
-            die();
+            // die();
         }
     }
 
