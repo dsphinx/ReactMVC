@@ -454,6 +454,27 @@ By using the update function, the name of the user with id 1 changes to "Ali". H
 
 To use the features of the Medoo library, which are also usable in the `MysqlBaseModel` class, you can refer to the documentation of this library.
 
+## Lang Model
+Lang Model is used to define a language. You can create a file in the Lang folder and define an array. Sample:
+```php
+<?php
+
+return [
+  'hello' => 'Hello',
+];
+
+?>
+```
+And you can use it as follows. (Note: English is the default language, so there is no need to define it in Lang(); but I put it for your example)
+```php
+<?php
+use ReactMVC\App\Models\Lang;
+
+$lang = new Lang('en');
+$hello = $lang->get('hello');
+echo $hello;
+```
+
 <hr>
 
 ## Social Media Links (dev):
