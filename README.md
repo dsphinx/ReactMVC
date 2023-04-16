@@ -4,6 +4,9 @@
 
 # ReactMVC
 The PHP framework for backend developers
+```
+composer create-project reactmvc/reactmvc myapp
+```
 
 </div>
 
@@ -479,13 +482,7 @@ echo $hello;
 
 ## Social Media Links (dev):
 - [Telegram](https://t.me/h3dev)
-- [Website](https://dark-dev.eu)
 - [G-mail](mailto:h3dev.pira@gmail.com)
-
-To develop using a framework beyond just the basic one, you can install and use the ReactMVC package:
-```
-composer require reactmvc/reactmvc
-```
 
 # Libraries
 - [PHPDotEnv](https://github.com/vlucas/phpdotenv)
